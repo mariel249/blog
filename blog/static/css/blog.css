@@ -1,0 +1,16 @@
+h1 {
+	color: red;
+	font-family: 'Lobster'; 
+}
+body	{				
+	padding-left:	15px; 
+}
+.post	{margin-bottom:	70px; 
+		color: red;
+}
+.post h2 a {margin-bottom:	70px; 
+		color: black;
+		font-family: 'Lobster'; 
+		
+
+}

@@ -1,19 +1,11 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>titulo</title>
-	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-	 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min. css">
+{% extends 'blog/base.html' %}
 
-</head>
-<body>
-	<h1>Noticias</h1>
+{%	block	content	%}	
 	{% for post in posts %}
-	<div>
+	<div class="post">
 		<p>published: {{post.published_date}}</p>
-		<h2><a href="">{{post.title}}</a></h2>
+		<h2><a	href="{% url 'post_detail' pk=post.pk %}">{{	post.title	}}</a></h2>
 		<p>{{post.text|linebreaksbr }}</p>
 	</div>
 	{% endfor %}
-</body>
-</html>
+{%	endblock	%}
